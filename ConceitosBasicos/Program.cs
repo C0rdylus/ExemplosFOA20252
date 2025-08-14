@@ -1,4 +1,4 @@
-﻿/*
+﻿
 byte idade;
 string nome;
 Console.Write("digite seu nome: ");
@@ -9,7 +9,7 @@ Console.WriteLine("Olá " + nome + ". a idade informada foi {0}" ,  idade);
 idade *= 2;
 Console.WriteLine($"a nova idade é {idade++}");
 Console.WriteLine($"a nova idade é {++idade}");
-*/
+
 //altere o programa para que solicite ao usuario informar
 //o seu salario e ao final informe o desconto de irpf de acordo
 //com o salario informado. ultilize a tabela oficial de descontos de irpf do brasil.
