@@ -14,8 +14,6 @@ Console.WriteLine($"a nova idade é {++idade}");
 //o seu salario e ao final informe o desconto de irpf de acordo
 //com o salario informado. ultilize a tabela oficial de descontos de irpf do brasil.
 
-using System.ComponentModel.Design;
-
 decimal salario;
 Console.Write("Informe Seu Salario: ");
 salario = Convert.ToDecimal(Console.ReadLine());
