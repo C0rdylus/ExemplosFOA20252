@@ -19,19 +19,19 @@ Console.WriteLine($"a nova idade é {++idade}");
 decimal salario;
 Console.Write("Informe Seu Salario: ");
 salario = Convert.ToDecimal(Console.ReadLine());
-if (salario < Convert.ToDecimal(2428.80))
+if (salario <= Convert.ToDecimal(2428.80))
 {
     Console.WriteLine("seu desconto e de 0%");
 }
-else if (salario < Convert.ToDecimal(2826.65))
+else if (salario <= Convert.ToDecimal(2826.65))
 {
     Console.WriteLine("seu desconto e de 7,5%");
 }
-else if (salario < Convert.ToDecimal(3751.05))
+else if (salario <= Convert.ToDecimal(3751.05))
 {
     Console.WriteLine("seu desconto e de 15%");
 }
-else if (salario < Convert.ToDecimal(4664.68))
+else if (salario <= Convert.ToDecimal(4664.68))
 {
     Console.WriteLine("seu desconto e de 22.5%");
 }
