@@ -51,3 +51,6 @@ catch(Exception e)
 somaDoisNumeros somaDoisNumeros = new somaDoisNumeros();
 int result;
 result = somaDoisNumeros.somar(20, 22);
+
+double milimetros = MetrosMilimetros.Converter(1.8);
+Console.WriteLine(milimetros);
