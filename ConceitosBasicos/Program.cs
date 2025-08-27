@@ -51,6 +51,17 @@ catch(Exception e)
 somaDoisNumeros somaDoisNumeros = new somaDoisNumeros();
 int result;
 result = somaDoisNumeros.somar(20, 22);
+Console.WriteLine(result);
 
 double milimetros = MetrosMilimetros.Converter(1.8);
 Console.WriteLine(milimetros);
+
+decimal salario;
+float salAumento;
+Console.Write("Informe Seu Salario: ");
+salario = decimal.Parse(Console.ReadLine());
+Console.Write("Informe Seu aumento em percentual: ");
+salAumento = float.Parse(Console.ReadLine());
+
+decimal aumento = calcularAumento.Aumento(salario, salAumento);
+Console.WriteLine($"voce recebeu um aumento de {salAumento}% ou seja {aumento:c2} o que fez seu salario ir de {salario:c2} para {aumento+salario:c2}");
