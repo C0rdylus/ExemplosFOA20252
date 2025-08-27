@@ -52,50 +52,62 @@ decimal salario;
 float salAumento;
 double metros;
 int Opt, N1,N2;
-do
+try
 {
-    Console.WriteLine("o que voce quer fazer agora?");
-    Console.WriteLine("0 - sair");
-    Console.WriteLine("1 - somar dois numeros");
-    Console.WriteLine("2 - converter metros para milimetros");
-    Console.WriteLine("3 - calcular aumento de salario");
-    Opt = int.Parse(Console.ReadLine());
-    while (Opt > 3)
+    do
     {
-        Console.Write("valor invalido, tente novamente: ");
+        Console.WriteLine("o que voce quer fazer agora?");
+        Console.WriteLine("0 - sair");
+        Console.WriteLine("1 - somar dois numeros");
+        Console.WriteLine("2 - converter metros para milimetros");
+        Console.WriteLine("3 - calcular aumento de salario");
         Opt = int.Parse(Console.ReadLine());
-    }
-    switch (Opt)
-    {
-        case 0:
-            break;
-        case 1:
-            Console.WriteLine("voce escolheu somar dois sumenros");
-            Console.Write("digite o primeiro valor");
-            N2 = int.Parse(Console.ReadLine());
-            Console.Write("digite o segundo valor");
-            N1 = int.Parse(Console.ReadLine());
-            somaDoisNumeros somaDoisNumeros = new somaDoisNumeros();
-            int result;
-            result = somaDoisNumeros.somar(N1, N2);
-            Console.WriteLine(result);
-            break;
-        case 2:
-            Console.WriteLine("voce escolheu converter metros para milimetros");
-            Console.Write("quantos metros voce quer converter?");
-            metros = double.Parse(Console.ReadLine());
-            double milimetros = MetrosMilimetros.Converter(metros);
-            Console.WriteLine(milimetros);
-            break;
-        case 3:
-            Console.WriteLine("voce escolheu calcular o aumento de salario");
-            Console.Write("Informe Seu Salario: ");
-            salario = decimal.Parse(Console.ReadLine());
-            Console.Write("Informe Seu aumento em percentual: ");
-            salAumento = float.Parse(Console.ReadLine());
-            decimal aumento = calcularAumento.Aumento(salario, salAumento);
-            Console.WriteLine($"voce recebeu um aumento de {salAumento}% ou seja {aumento:c2} o que fez seu salario ir de {salario:c2} para {aumento + salario:c2}");
-            break;
-    }
-} while (Opt != 0);
-Console.WriteLine("ate mais tarde");
+        while (Opt > 3)
+        {
+            Console.Write("valor invalido, tente novamente: ");
+            Opt = int.Parse(Console.ReadLine());
+        }
+        switch (Opt)
+        {
+            case 0:
+                break;
+            case 1:
+                Console.WriteLine("voce escolheu somar dois sumenros");
+                Console.Write("digite o primeiro valor");
+                N2 = int.Parse(Console.ReadLine());
+                Console.Write("digite o segundo valor");
+                N1 = int.Parse(Console.ReadLine());
+                somaDoisNumeros somaDoisNumeros = new somaDoisNumeros();
+                int result;
+                result = somaDoisNumeros.somar(N1, N2);
+                Console.WriteLine(result);
+                break;
+            case 2:
+                Console.WriteLine("voce escolheu converter metros para milimetros");
+                Console.Write("quantos metros voce quer converter?");
+                metros = double.Parse(Console.ReadLine());
+                double milimetros = MetrosMilimetros.Converter(metros);
+                Console.WriteLine(milimetros);
+                break;
+            case 3:
+                Console.WriteLine("voce escolheu calcular o aumento de salario");
+                Console.Write("Informe Seu Salario: ");
+                salario = decimal.Parse(Console.ReadLine());
+                Console.Write("Informe Seu aumento em percentual: ");
+                salAumento = float.Parse(Console.ReadLine());
+                decimal aumento = calcularAumento.Aumento(salario, salAumento);
+                Console.WriteLine($"voce recebeu um aumento de {salAumento}% ou seja {aumento:c2} o que fez seu salario ir de {salario:c2} para {aumento + salario:c2}");
+                break;
+        }
+    } while (Opt != 0);
+    Console.WriteLine("ate mais tarde");
+}
+catch (FormatException)
+{
+    Console.WriteLine("digite apenas valores numericos");
+}
+catch (Exception e)
+{
+    Console.WriteLine("ocorreu um erro entre em contato com o suporte");
+    Console.WriteLine(e.ToString());
+}
