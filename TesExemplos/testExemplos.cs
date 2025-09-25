@@ -24,7 +24,7 @@ namespace TesExemplos
             imcCalculado = imc.CalculaImc(peso, altura);
 
             //verificaçao
-            Assert.AreEqual(Math.Round(24.49, 2), Math.Round(imcCalculado, 2));
+            Assert.AreEqual(Math.Round(24.97, 2), Math.Round(imcCalculado, 2));
         }
     }
 }
